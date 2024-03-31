@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    color: #31363F;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #332941;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+#topic {
+    font-weight: 600;
+    margin: 0;
+}
+
+.form {
+    flex: 50%;
+    font-size: 1.5vw;
+    background-color: rgba(255, 181, 218, 1);
+    text-align: center;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    padding: 10px;
+}
+
+.menu-result {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    align-items: center;
+    background: linear-gradient(93deg, rgba(255, 181, 218, 1) 5%, rgba(139, 147, 255, 1) 35%, rgba(87, 85, 254, 1) 100%);
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.inputEmpty {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(255, 0, 0, 0.4), 0 0 4px rgba(255, 0, 0, 0.4), 0 0 8px rgba(255, 0, 0, 0.4), 0 0 10px rgba(255, 0, 0, 0.4), 0 0 18px rgba(255, 0, 0, 0.4), inset 0 0 4px rgba(255, 0, 0, 0.4) !important;
+}
+
+#form input {
+    font-size: 1.4vw;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.7vw;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 300ms ease-in-out;
+    margin: 9px;
+}
+
+#form input:focus {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px #969696,
+        0px 0px 10px #ffffff;
+}
+
+#form input[name^="friendNickname"]:nth-child(odd) {
+    background-color: #d7d6d6;
+}
+
+#form input[name^="friendNickname"]:nth-child(even) {
+    background-color: #F7F6F2;
+}
+
+#form input[name^="friendAge"]:nth-child(even) {
+    background-color: #d7d6d6;
+}
+
+#form input[name^="friendAge"]:nth-child(odd) {
+    background-color: #F7F6F2;
+}
+
+input[type="number"] {
+    width: 7vw;
+}
+
+.menu button {
+    font-size: 1.6vw;
+    width: 16vw;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.result textarea {
+    width: 30vw;
+    height: 10vw;
+    font-size: 1.5vw;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #dddddd;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+    margin: 20px;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.error {
+    color: red;
+}
+
+.menu button {
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-weight: 300;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.menu button:hover {
+    background: linear-gradient(180deg, rgba(255, 175, 215, 1) 0%, rgba(255, 208, 236, 1) 70%);
+    ;
+}
+
+.menu button:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.menu button:focus-visible {
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .form {
+        flex: 65%;
+    }
+
+    .menu-result {
+        flex: 35%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .form {
+        flex: 50%;
+        border-radius: unset;
+        border-top-left-radius: 1vw;
+        border-top-right-radius: 1vw;
+        padding: 10px;
+    }
+
+    .menu-result {
+        flex: 50%;
+        background: linear-gradient(180deg, rgba(255, 181, 218, 1) 5%, rgba(139, 147, 255, 1) 35%, rgba(87, 85, 254, 1) 100%);
+        border-radius: unset;
+        border-bottom-left-radius: 1vw;
+        border-bottom-right-radius: 1vw;
+        padding: 10px;
+    }
+
+    .menu button {
+        font-size: 2.5vw;
+        width: 50vw;
+        overflow: hidden;
+        margin: 5px;
+    }
+
+    .form {
+        font-size: 2.5vw;
+    }
+
+    #form input {
+        font-size: 2.4vw;
+    }
+
+    input[type="number"] {
+        width: 10.5vw;
+    }
+
+    .result textarea {
+        width: 50vw;
+        height: 30vw;
+        font-size: 2.4vw;
+    }
+}
